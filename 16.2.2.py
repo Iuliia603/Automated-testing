@@ -46,10 +46,12 @@ print_cost(qty=5)
 
 def shout_echo(word1, echo=1):
     echo_word= word1 * echo
-    print(echo_word)
-no_echo = shout_echo("Hey")
+	shout_word = echo_word + 'Hey'
+	return shout_word
+
+no_echo = shout_echo
 print(no_echo)
 with_echo = shout_echo("Hey", echo=5)
+print(no_echo)
 print(with_echo)
-
 
