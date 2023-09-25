@@ -18,3 +18,9 @@ class ConfigReader:
 
     def get_wait_time(self):
         return self.reader.get_wait_time()
+
+    def get_email(self):
+        return self.reader.get_email()
+
+    def get_password(self):
+        return self.reader.get_password()
