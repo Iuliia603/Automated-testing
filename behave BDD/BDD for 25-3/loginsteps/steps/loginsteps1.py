@@ -39,7 +39,7 @@ def click_login_button(context):
     login_page.login_btn_click()
 
 
-@then("user's profile page is launched")
+@then("user profile is launched")
 def verify_user_profile_view(context):
     profile_page = ProfilePage(context.browser)
     wait = context.browser.get_wd_wait()
