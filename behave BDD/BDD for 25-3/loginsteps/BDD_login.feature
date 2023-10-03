@@ -10,7 +10,7 @@ Feature: Login functionality
     Given user is not logged in
     When user enters correct Email and Password
     And user clicks Login button
-    Then user's profile is launched
+    Then user profile is launched
 
 
   Scenario: Login without entering a Email and Password
