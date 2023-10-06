@@ -12,4 +12,4 @@ Feature: Registrant functionality
     Given All fields are cleared
     When User clicks Submit button
     Then Warning will be shown about 'You must agree to the Privacy Policy!'
-    
+     
