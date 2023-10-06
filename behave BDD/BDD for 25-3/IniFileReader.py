@@ -49,3 +49,9 @@ class IniFileReader:
         if not self.data.has_option('user2', 'password'):
             raise Exception("Password option is not present in the 'user1' section of the config file")
         return self.data.get('user2', 'password')
+
+    def get_url(self):
+        value = self.data.get('environment', 'url', fallback=None)
+        if value is None:
+            raise Exception("URL option is not found in environment section")
+        return value
