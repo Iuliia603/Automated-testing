@@ -1,7 +1,7 @@
 Feature: Login functionality
 
-  Background:
-    Given user launch login page
+#  Background:
+#    Given user launch login page
 
 
   @positive
