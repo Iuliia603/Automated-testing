@@ -36,3 +36,7 @@ class ConfigReader:
 
     def get_user2_password(self):
         return self.reader.get_user2_password()
+
+    def get_url(self):
+        return self.reader.get_url()
+
