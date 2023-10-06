@@ -14,7 +14,7 @@ class LoginPage:
         self.login_btn = Element(browser, By.XPATH, '//*[@id="content"]/div/div[2]/div/form/input')
         self.email_field = Element(browser, By.ID, 'input-email')
         self.password_field = Element(browser, By.ID, 'input-password')
-        self.login_error_warning = Element(browser, By.XPATH, "/html/body/div[2]/div[1]/text()")
+        self.login_error_warning = Element(browser, By.XPATH, "/html/body/div[2]/div[1]")
 
     def open_registration_from_menu(self):
         self.header.open_login_page()
