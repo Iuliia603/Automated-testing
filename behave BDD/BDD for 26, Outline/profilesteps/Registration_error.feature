@@ -17,8 +17,8 @@ Feature: Error messages during registration process
     | password    | short | Aa1                               |
     | password    | long  | 123456789123456789aAs             |
     | email       | short | 1@                                |
-    | email       | long  | iuliia@gmail.com                  |
+    | email       | long  | iuvgghfhgfhgfhhfhfhliia@gmail.com |
     | address_1   | short | A3                                |
-    | address_1   | long  | 684 Elmsping                      |
+    | address_1   | long  | abcdeabcdeabcdeabcdeabcdeabcdeabc abcdeabcdeabcdeabcdeabcdeabcdeabc abcdeabcdeabcdeabcdeabcdeabcdeabc abcdeabcdeabcdeabcdeabcdeabc |
     | city        | short | Pa                                |
-    | city        | long  | Pittsburgh                        |
+    | city        | long  | Pittsburgh abcdeabcdeabcdeabcdeabcdeabcdeabc abcdeabcdeabcdeabcdeabcdeabcdeabc abcdeabcdeabcdeabcdeabcdeabcdeabc abcdeabcdeabcdeabcdeabcdeabc |
