@@ -1,0 +1,56 @@
+<testsuite name="BDD_login.Login functionality" tests="4" errors="0" failures="0" skipped="0" time="8.520254" timestamp="2023-10-16T14:58:01.914328" hostname="MacBook-Air-Ulia.local"><testcase classname="BDD_login.Login functionality" name="Log in with the correct Email and Password" status="passed" time="2.519496"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @positive @critical
+  Scenario: Log in with the correct Email and Password
+    Given user is not logged in ... passed in 0.404s
+    When user enters correct Email and Password ... passed in 0.863s
+    And user clicks Login button ... passed in 1.053s
+    Then user profile is launched ... passed in 0.200s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="BDD_login.Login functionality" name="Login without entering a Email and Password" status="passed" time="1.103055"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @negative @major
+  Scenario: Login without entering a Email and Password
+    Given user is not logged in ... passed in 0.384s
+    When user clicks Login button ... passed in 0.670s
+    Then warning shown about 'No match for E-Mail Address and/or Password' ... passed in 0.049s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="BDD_login.Login functionality" name="Login without entering a Password" status="passed" time="2.400378"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @negative @skip
+  Scenario: Login without entering a Password
+    Given user is not logged in ... passed in 0.393s
+    When user enters correct Email ... passed in 0.543s
+    And user clicks Login button ... passed in 1.393s
+    Then warning shown about 'No match for E-Mail Address and/or Password' ... passed in 0.071s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="BDD_login.Login functionality" name="Log in with the incorrect Password" status="passed" time="2.497325"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @negative @skip @wip
+  Scenario: Log in with the incorrect Password
+    Given user is not logged in ... passed in 0.414s
+    When user enters correct Email and incorrect Password ... passed in 0.891s
+    And user clicks Login button ... passed in 1.128s
+    Then warning shown about 'No match for E-Mail Address and/or Password' ... passed in 0.065s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
