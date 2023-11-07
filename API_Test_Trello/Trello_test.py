@@ -8,6 +8,7 @@ URL = "https://api.trello.com/"
 
 def get_user_boards():
     endpoint = "1/members/me/boards"
+
     params = {
         'key': APIKEY,
         'token': TOKEN
@@ -36,8 +37,8 @@ def get_board_id(name):
 
 def update_board(name, **kwargs):
     board_id = get_board_id(name)
-
     endpoint = "{}1/boards/{}".format(URL, board_id)
+
     params = {
         'key': APIKEY,
         'token': TOKEN,
@@ -61,6 +62,7 @@ def update_board(name, **kwargs):
 def delete_board(name):
     board_id = get_board_id(name)
     endpoint = "{}1/boards/{}".format(URL, board_id)
+
     params = {
         'key': APIKEY,
         'token': TOKEN,
@@ -81,11 +83,13 @@ def delete_board(name):
 
 def create_new_board(name):
     endpoint = "1/boards/"
+
     params = {
         'key': APIKEY,
         'token': TOKEN,
         'name': name
     }
+
     response = requests.post(url=URL + endpoint, json=params)
     assert response.status_code == 200
     assert response.reason == "OK"
@@ -120,8 +124,10 @@ def create_new_list(name, list_name):
     response_json = response.json()
     print(response_json)
 
+
 def get_user_list(name):
     board_id = get_board_id(name)
+
     endpoint = "{}1/boards/{}/lists".format(URL, board_id)
     headers = {
         "Accept": "application/json"
@@ -139,6 +145,7 @@ def get_user_list(name):
     response_json = response.json()
     return response_json
 
+
 def get_list_id(name, list_name):
     list_id = None
     response = get_user_list(name)
@@ -153,7 +160,6 @@ def get_list_id(name, list_name):
 
 
 def create_new_card(name, list_name, card_name):
-    board_id = get_board_id(name)
     list_id = get_list_id(name, list_name)
 
     endpoint = "{}1/cards".format(URL)
@@ -183,7 +189,9 @@ def create_new_card(name, list_name, card_name):
 
 def update_card(card_name, **kwargs):
     card_id = "Pfz6uUnX"
+
     endpoint = "{}1/cards/{}".format(URL, card_id)
+
     params = {
         'key': APIKEY,
         'token': TOKEN,
@@ -207,7 +215,9 @@ def update_card(card_name, **kwargs):
 
 def delete_card(card_name):
     card_id = "Pfz6uUnX"
+
     endpoint = "{}1/cards/{}".format(URL, card_id)
+
     params = {
         'key': APIKEY,
         'token': TOKEN,
@@ -229,6 +239,7 @@ def delete_card(card_name):
 def archive_list(name, list_name):
     board_id = get_board_id(name)
     list_id = get_list_id(name, list_name)
+
     endpoint = "{}1/boards/{}/lists/{}/closed".format(URL, board_id, list_id)
     headers = {
         "Accept": "application/json"
